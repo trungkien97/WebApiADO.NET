@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="/Content/Js/jquery-3.4.1.min.js"></script>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <script>
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:28487/api/Customers",
+            dataType: 'json',
+            cache: false,
+            success: function (data) {
+                console.log(data);
+            }
+        });
+    </script>
+</body>
+</html>
